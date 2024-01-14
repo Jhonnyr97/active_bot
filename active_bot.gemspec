@@ -5,20 +5,20 @@ require_relative "lib/active_bot/version"
 Gem::Specification.new do |spec|
   spec.name = "active_bot"
   spec.version = ActiveBot::VERSION
-  spec.authors = ["TODO: Write your name"]
-  spec.email = ["TODO: Write your email address"]
+  spec.authors = ["Nilthon Jhon Rojas Apumayta"]
+  spec.email = ["oneill.jhon97@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Ruby on Rails gem for easy bot development with large language models (LLMs), offering intuitive integration and customization."
+  spec.description = "Ruby on Rails gem designed to simplify the development of interactive bots using large language models (LLMs), providing an intuitive interface and advanced features for integration and customization."
+  spec.homepage = "https://github.com/Jhonnyr97/active_bot"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["homepage_uri"] = "https://github.com/Jhonnyr97/active_bot"
+  spec.metadata["source_code_uri"] = "https://github.com/Jhonnyr97/active_bot"
+  spec.metadata["changelog_uri"] = "https://github.com/Jhonnyr97/active_bot/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -31,8 +31,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "langchainrb"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
