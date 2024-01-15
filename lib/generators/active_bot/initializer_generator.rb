@@ -2,7 +2,7 @@
 require 'rails/generators/base'
 
 module ActiveBot
-  class InitializerBotGenerator < Rails::Generators::Base
+  class InitializerGenerator < Rails::Generators::Base
     source_root File.expand_path('templates', __dir__)
 
     def create_initializer_file

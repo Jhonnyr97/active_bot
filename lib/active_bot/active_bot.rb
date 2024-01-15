@@ -1,24 +1,22 @@
 module ActiveBot
-  class << self
-    attr_accessor :configuration
-  end
-
-  def self.configure
-    self.configuration ||= Configuration.new
-    yield(configuration)
-  end
-
   class Configuration
-    attr_accessor :llm, :vector
+    attr_accessor :llm
+
+    def initialize
+      @llm = OpenStruct.new
+    end
 
     def llm_config
-      self.llm ||= LLMConfig.new
-      yield(llm)
+      yield(@llm) if block_given?
     end
+  end
 
-    class LLMConfig
-      attr_accessor :call, :model
+  class << self
+    attr_accessor :configuration
+
+    def configure
+      self.configuration ||= Configuration.new
+      yield(configuration) if block_given?
     end
-
   end
 end
