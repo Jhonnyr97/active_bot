@@ -1,14 +1,6 @@
 module ActiveBot
   class Configuration
-    attr_accessor :llm
-
-    def initialize
-      @llm = OpenStruct.new
-    end
-
-    def llm_config
-      yield(@llm) if block_given?
-    end
+    attr_accessor :llm_call, :llm_model, :llm_temperature, :llm_template, :llm_template_variables
   end
 
   class << self
