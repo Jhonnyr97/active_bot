@@ -2,14 +2,10 @@
 require 'rails/generators/base'
 
 module ActiveBot
-  class CreateBotGenerator < Rails::Generators::NamedBase
+  class InstallBotGenerator < Rails::Generators::NamedBase
     source_root File.expand_path('templates', __dir__)
 
-    def create_bot_file
-      template "bot_template.rb", "bots/#{file_name}_bot.rb"
-    end
-
-    def create_initializer
+    def create_initializer_file
       template "initializer_template.rb", "config/initializers/active_bot.rb"
     end
 
